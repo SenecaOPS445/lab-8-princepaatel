@@ -1,0 +1,38 @@
+PLAY [Configure OPS445 Linux VM for Labs] **************************************
+
+TASK [Gathering Facts] *********************************************************
+ok: [vmlab]
+
+TASK [Update Apache (httpd) package] *******************************************
+ok: [vmlab]
+
+TASK [Install EPEL repository] *************************************************
+ok: [vmlab]
+
+TASK [Remove tree package] *****************************************************
+ok: [vmlab]
+
+TASK [Set the hostname] ********************************************************
+changed: [vmlab]
+
+TASK [Create user with sudo access] ********************************************
+changed: [vmlab]
+
+TASK [Ensure the new user can SSH without a password] **************************
+changed: [vmlab]
+
+TASK [Create lab directories] **************************************************
+changed: [vmlab] => (item=1)
+changed: [vmlab] => (item=2)
+changed: [vmlab] => (item=3)
+changed: [vmlab] => (item=4)
+changed: [vmlab] => (item=5)
+changed: [vmlab] => (item=6)
+changed: [vmlab] => (item=7)
+changed: [vmlab] => (item=8)
+
+TASK [Ensure Apache service is started] ****************************************
+changed: [vmlab]
+
+PLAY RECAP *********************************************************************
+vmlab                      : ok=9    changed=5    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0
